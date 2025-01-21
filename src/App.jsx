@@ -8,13 +8,15 @@ import SideBar from "./components/ui/SideBar"
 function App() {
 
   return (
-    <div>
+    <div className="md:flex min-h-screen">
       <SideBar/>
-      <Routes>
-        <Route path="/" element={<Orders/>}/>
-        <Route path="/menu" element={<Menu/>}/>
-        <Route path="/new-dish" element={<NewDish/>}/>
-      </Routes>
+      <div className="md:w-3/5 xl:w-4/5">
+        <Routes>
+          <Route path="/" element={<Orders/>}/>
+          <Route path="/menu" element={<Menu/>}/>
+          <Route path="/new-dish" element={<NewDish/>}/>
+        </Routes>
+      </div>
     </div>
   )
 }
